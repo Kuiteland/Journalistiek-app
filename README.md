@@ -10,6 +10,7 @@ Features:
 * Overzichten overzetten naar excel/pdf bestand
 * Mogelijk tot groepsmail versturen naar alle betrokkenen
 * Simpel/Intuïtief
+* Veilig
 
 Framewors, languages and libraries:
 * Ruby on Rails
