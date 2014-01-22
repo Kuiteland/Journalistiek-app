@@ -1,0 +1,39 @@
+#drop-down-menum{;
+	width:960px;
+	align:center;
+	display; inline-block;
+	margin:0px auto;}
+}
+	ul{
+		font-weight:bold;color:black;
+		margin:0;
+		padding:0;
+		list-style:none}
+	ul li{
+		display:block;
+		position:relative;
+		float:left;}
+	li ul{display:none}
+	ul li a{
+		display:block;
+		margin-left:none;
+		color:white;				/* Color letters */
+        text-align:center;
+		border-top:1px solid #DDFFCC;		
+        width:160px;
+		padding: 5px 0px 5px 0px;
+		background:#99CCFF;			/* Color boxes */
+		white-space:nowrap}
+	ul li a:hover{background:#6B8FB2;color:inherit}
+	li:hover ul{ 
+		display:block; 
+		position:absolute;
+		float:left}
+	li:hover li{ 
+		font-size:80%;
+		clear:left; 
+		width:absolute;}
+	li:hover a{ background:#99CCFF;color:inherit}
+	li:hover li a:hover{background:#99CCFF;color:white;}	/* Color while hovering */
+	.clear_all{clear:both;height:8px;
+	}
