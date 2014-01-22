@@ -9,9 +9,17 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
+    <% if signed_in? %>
     <%= render 'layouts/header' %>
     <div class = "container">
+        <p> signed in </p>
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
     <%= yield %>
+    <% else %>
+    <%= render 'layouts/signin' %>
+    <% end %>
   </div>
   </body>
 </html>
