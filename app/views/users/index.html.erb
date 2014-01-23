@@ -8,8 +8,13 @@
     <tr>
       <td><%= link_to user.name, user %> </td>
       <td><%= user.email %>
+      <td>
+      	<% if current_user.admin? && !current_user?(user) %>
+    | 		<%= link_to "delete", user, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  		<% end %>
+  	  </td>
     </tr>
   <% end %>
 </table>
-
-<%= will_paginate %>
+  <%= will_paginate %>
