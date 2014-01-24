@@ -63,7 +63,7 @@ body{
         ul li a{
                 display:block;
                 margin-left:none;
-                color:#6F2725;                                /* Color letters */
+                color:white;                                /* Color letters */
         text-align:center;
                 border-right:1px solid #6E91CF;
     border-bottom:1px solid #6E91CF;
@@ -84,6 +84,8 @@ body{
         li:hover a{ background:#99CCFF;color:inherit}
         li:hover li a:hover{background:#99CCFF;color:white;}        /* Color while hovering */
         .clear_all{clear:both;height:8px;}
+
+        a{text-decoration: none;}
 
 
 
