@@ -1,0 +1,35 @@
+<% provide(:title, 'New') %>
+<h1>New Subject</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@subject) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.label :short_description %>
+      <p><%= f.text_field :short_description %></p>
+
+      <%= f.label :description %>
+      <p><%= text_area_tag(:description, "beschrijving", size: "48x12") %></p>
+
+      <p><%= f.label :red %>
+      <%= select_tag(:red, 
+            options_for_select([['A', 1], ['B', 2]])) %></p>
+
+      <p><%= f.label :reg %>
+      <%= select_tag(:reg, 
+            options_for_select([['A', 1], ['B', 2]])) %></p>
+
+      <p><%= f.label :host %>
+      <%= select_tag(:host, 
+            options_for_select([['A', 1], ['B', 2]])) %></p>
+
+      <p><%= f.label :status %>
+      <%= select_tag(:status, 
+            options_for_select([['A', 1], ['B', 2]])) %></p>
+
+      <%= f.submit "Create", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
