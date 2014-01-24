@@ -1,9 +1,15 @@
 class SubjectsController < ApplicationController
+
+  def index
+    @subjects = Subject.paginate(page: params[:page], :per_page => 1)
+  end
+
   def new
   	@subject = Subject.new
   end
 
   def show
+  	@subject = Subject.find(params[:id])
   end
 
   def create
@@ -15,6 +21,27 @@ class SubjectsController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+  	@subject = Subject.find(params[:id])
+  end
+
+  def update
+    @subject = Subject.find(params[:id])
+    if @subject.update_attributes(subject_params)
+      flash[:success] = "Subject updated"
+      redirect_to @subject
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    Subject.find(params[:id]).destroy
+    flash[:success] = "Subject deleted."
+    redirect_to users_url
+  end
+
 
   private
 

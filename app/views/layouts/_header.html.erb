@@ -1,11 +1,9 @@
  <header>
 <ul id="drop-down-menum">	<!-- Unordered list of the drop down menu -->	
 <li><%= link_to "Home",    '/' %></li>
-<li><a>Uitzendingen</a> <!-- First drop down button with different categories -->
+<li><%= link_to "Subjects",    subjects_path %>
 	<ul>
-		<li><%= link_to "Overzicht",    '#' %></li> 
-		<li><%= link_to "Nieuw",    '#' %></li> 
-		<li><%= link_to "Voltooid",    '#' %></li>	
+		<li><%= link_to "Nieuw",    new_path %></li>
 	</ul> 
 </li> 
 <li><a>Agenda</a> <!-- Second drop down button with different supplies -->

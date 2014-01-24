@@ -3,7 +3,7 @@ class CreateSubjects < ActiveRecord::Migration
     create_table :subjects do |t|
       t.string :name
       t.string :short_description
-      t.string :description
+      t.text :description
       t.string :red
       t.string :reg
       t.string :host
