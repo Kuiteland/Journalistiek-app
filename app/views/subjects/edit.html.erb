@@ -11,23 +11,26 @@
       <p><%= f.text_field :short_description %></p>
 
       <%= f.label :description %>
-      <p><%= f.text_area(:description, size: "50x12") %></p>
+      <p><%= f.text_area(:description, size: "50x12", max: "100x100") %></p>
 
-      <p><%= f.label :red %>
+      <p><%= f.label :Redacteur %>
       <%= f.select(:red, 
             options_for_select([['A', "A"], ['B', 2]])) %></p>
 
-      <p><%= f.label :reg %>
+      <p><%= f.label :Regisseur %>
       <%= f.select(:reg, 
             options_for_select([['A', 1], ['B', 2]])) %></p>
 
-      <p><%= f.label :host %>
+      <p><%= f.label :Presentator %>
       <%= f.select(:host, 
             options_for_select([['A', 1], ['B', 2]])) %></p>
 
       <p><%= f.label :status %>
       <%= f.select(:status, 
-            options_for_select([['A', 1], ['B', 2]])) %></p>
+            options_for_select([['Idee', "Idee"], ['Research', "Research"],
+                                ['Productie', "Productie"],
+                                ['Klaar', "Klaar"],
+                                ['Afgewezen', "Afgewezen"]])) %></p>
 
       <%= f.submit "Create", class: "bottom" %>
     <% end %>
