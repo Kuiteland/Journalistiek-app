@@ -15,7 +15,7 @@
 </li>
 <li><%= link_to "Gebruikers",    users_path %></li>
 <li><%= link_to "Notities",    '#' %></li>
-<li><%= link_to "Profiel",    current_user %>
+<li><%= link_to current_user.name,    current_user %>
 <ul>
 	<li><%= link_to "Sign out", signout_path, method: "delete" %></li>
 </ul>
