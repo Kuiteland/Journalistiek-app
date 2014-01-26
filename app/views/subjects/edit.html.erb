@@ -32,7 +32,12 @@
                                 ['Klaar', "Klaar"],
                                 ['Afgewezen', "Afgewezen"]])) %></p>
 
-      <%= f.submit "Create", class: "bottom" %>
+      <%= f.submit "Update", class: "bottom" %>
     <% end %>
   </div>
 </div>
+
+<% if current_user.admin? %>
+      <%= link_to "delete", @subject, method: :delete,
+                            data: { confirm: "You sure?" } %>
+<% end %>
