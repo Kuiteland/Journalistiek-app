@@ -36,12 +36,12 @@
                                 ['Klaar', "Klaar"],
                                 ['Afgewezen', "Afgewezen"]])) %></p></td>
   </tr>
+  <tr>
+      <td><p><%= f.label "Uitzend datum" %></td>
+       <td> <%= f.date_select(:air_date, :order => [:day, :month, :year],
+                         :include_blank => true)%></p></td>
+  </tr>                     
 </table>
-
-      <p><%= f.label "Uitzend datum" %>
-        <%= f.date_select(:air_date, :order => [:day, :month, :year],
-                         :include_blank => true)%></p>
-
       <%= f.submit "Create", class: "bottom" %>
     <% end %>
   </div>
