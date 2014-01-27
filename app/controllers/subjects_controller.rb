@@ -1,7 +1,8 @@
 class SubjectsController < ApplicationController
 
   def index
-    @subjects = Subject.paginate(page: params[:page], :per_page => 30)
+    @subjects = Subject.paginate(:order => 'name DESC', 
+                  page: params[:page], :per_page => 30)
   end
 
   def new
@@ -47,6 +48,6 @@ class SubjectsController < ApplicationController
 
     def subject_params
       params.require(:subject).permit(:name, :short_description, :description,
-                                   :red, :reg, :host, :status)
+                                   :red, :reg, :host, :status, :air_date)
     end
 end

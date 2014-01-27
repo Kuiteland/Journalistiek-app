@@ -32,6 +32,10 @@
                                 ['Klaar', "Klaar"],
                                 ['Afgewezen', "Afgewezen"]])) %></p>
 
+      <p><%= f.label "Uitzend datum" %>
+      <%= f.date_select(:air_date, :order => [:day, :month, :year],
+                       :include_blank => true)%></p>
+
       <%= f.submit "Update", class: "bottom" %>
     <% end %>
   </div>
