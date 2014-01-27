@@ -12,25 +12,31 @@
 
       <%= f.label :description %>
       <p><%= f.text_area(:description, size: "50x12", max: "100x100") %></p>
-
-      <p><%= f.label :Redacteur %>
-      <%= f.select(:red, 
-            options_for_select([['A', "A"], ['B', 2]])) %></p>
-
-      <p><%= f.label :Regisseur %>
-      <%= f.select(:reg, 
-            options_for_select([['A', 1], ['B', 2]])) %></p>
-
-      <p><%= f.label :Presentator %>
-      <%= f.select(:host, 
-            options_for_select([['A', 1], ['B', 2]])) %></p>
-
-      <p><%= f.label :status %>
-      <%= f.select(:status, 
+<table>
+  <tr>
+    <td><p><%= f.label :Redacteur %></td>
+    <td><%= f.select(:red, 
+            options_for_select([['A', "A"], ['B', 2]])) %></p></td>
+  </tr>
+  <tr>
+    <td><p><%= f.label :Regisseur %></td>
+    <td><%= f.select(:reg, 
+            options_for_select([['A', 1], ['B', 2]])) %></p></td>
+  </tr>
+  <tr>
+    <td><p><%= f.label :Presentator %></td>
+    <td><%= f.select(:host, 
+            options_for_select([['A', 1], ['B', 2]])) %></p></td>
+  </tr>
+  <tr>
+      <td><p><%= f.label :status %></td>
+      <td><%= f.select(:status, 
             options_for_select([['Idee', "Idee"], ['Research', "Research"],
                                 ['Productie', "Productie"],
                                 ['Klaar', "Klaar"],
-                                ['Afgewezen', "Afgewezen"]])) %></p>
+                                ['Afgewezen', "Afgewezen"]])) %></p></td>
+  </tr>
+</table>
 
       <p><%= f.label "Uitzend datum" %>
         <%= f.date_select(:air_date, :order => [:day, :month, :year],
