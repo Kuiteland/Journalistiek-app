@@ -1,7 +1,8 @@
 class SubjectsController < ApplicationController
 
   def index
-    @subjects = Subject.paginate(:order => 'name DESC', 
+    @search = "%#{params[:search]}%"
+    @subjects = Subject.paginate(:conditions => ['name LIKE ?', @search],
                   page: params[:page], :per_page => 30)
   end
 
