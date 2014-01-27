@@ -81,27 +81,26 @@ body {
   -webkit-box-shadow: 0px 0px 5px 5px #788;
   box-shadow: 0px 0px 10px 10px #2F2E8A; }
 
-#drop-down-menum {
+#drop-down-menu{
   width: 966px;
   align: center;
   margin: 0px auto; }
 
-ul {
-  
+#menu ul {
   color: black;
   margin: 0;
   padding: 0;
   list-style: none; }
 
-ul li {
+#menu ul li {
   display: block;
   position: relative;
   float: left; }
 
-li ul {
+#menu li ul {
   display: none; }
 
-ul li a {
+#menu ul li a {
   display: block;
   margin-left: none;
   color: white;
@@ -116,27 +115,40 @@ ul li a {
   /* Color boxes */
   white-space: nowrap; }
 
-ul li a:hover {
+#menu ul li a:hover {
   background: #4072b4;
   color: inherit; }
 
-li:hover ul {
+#menu li:hover ul {
   display: block;
   position: absolute;
   float: left; }
 
-li:hover li {
+#menu li:hover li {
   font-size: 80%;
   clear: left;
   width: absolute; }
 
-li:hover a {
+#menu li:hover a {
   background: #4679bd;
   color: inherit; }
 
-li:hover li a:hover {
+#menu li:hover li a:hover {
   background: #4072b4;
-  color: white; }
+            color: white; }
+
+.pagination ul li a{
+    display:inline-block;
+    text-align:center;
+    width:160px;
+    margin:5px;
+}
+.pagination li{
+    display:inline-block;
+}
+.users{
+    margin-left:85px;
+}
 
 a{text-decoration:none}
 
