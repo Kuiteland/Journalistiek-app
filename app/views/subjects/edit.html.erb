@@ -6,12 +6,12 @@
     <%= form_for(@subject) do |f| %>
 
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field( :name, :maxlength => 50) %>
       <p><%= f.label :short_description %></p>
-      <p><%= f.text_field :short_description %></p>
+      <p><%= f.text_field(:short_description, :maxlength => 50) %></p>
 
       <%= f.label :description %>
-      <p><%= f.text_area(:description, size: "50x12", maxlength="50" ) %></p>
+      <p><%= f.text_area(:description, size: "50x12") %></p>
 
 <table>
   <tr>

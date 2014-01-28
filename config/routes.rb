@@ -7,6 +7,7 @@ JourDat::Application.routes.draw do
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match 'new', to: 'subjects#new',              via: 'get'
+  match 'shows', to: 'subjects#date_index',      via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
