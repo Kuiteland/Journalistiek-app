@@ -12,6 +12,13 @@ class SubjectsController < ApplicationController
                 paginate(page: params[:page], :per_page => 30)
   end
 
+  def date_show
+    @date = "%#{params[:date]}%"
+    @subjects = Subject.paginate(:conditions => ['air_date LIKE ?',
+                                                          @date],
+                              page: params[:page], :per_page => 30)
+  end
+
   def new
   	@subject = Subject.new
   end
