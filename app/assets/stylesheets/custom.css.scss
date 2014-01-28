@@ -68,7 +68,7 @@ body {
   background-color: #DDE0F4;
   margin: 0px auto;
   padding: 0px;
-  width: 966px;
+  width: 95%;
   align: center;
   font-family: helvetica;
   font-size: 14px;
@@ -79,7 +79,7 @@ body {
 #menu{margin-top:20px;
     height:80px;}
 #drop-down-menu{
-  width: 966px;
+  width: 95%;
   align: center;
   margin: 0px auto; }
 
@@ -90,12 +90,14 @@ body {
   list-style: none; }
 
 #menu ul li {
+  width:calc(100%/6);
   display: block;
   position: relative;
   float: left; }
 
 #menu li ul {
-  display: none; }
+    display: none; 
+}
 
 #menu ul li a {
   display: block;
@@ -105,7 +107,6 @@ body {
   text-align: center;
   border-right: 1px solid #6E91CF;
   border-bottom: 1px solid #6E91CF;
-  width: 160px;
   padding: 5px 0px 5px 0px;
   border-radius: 0px;
   background: #4679bd;
@@ -119,20 +120,25 @@ body {
 #menu li:hover ul {
   display: block;
   position: absolute;
-  float: left; }
+  float: left;
+  
+}
 
 #menu li:hover li {
   font-size: 80%;
   clear: left;
-  width: absolute; }
+  
+}
 
 #menu li:hover a {
   background: #4679bd;
-  color: inherit; }
+  color: inherit;
+}
 
 #menu li:hover li a:hover {
   background: #4072b4;
-            color: white; }
+            color: white;
+}
 
 .pagination ul li a{
     display:inline-block;
@@ -199,12 +205,11 @@ a{text-decoration:none}
     text-align:left; 
 }
 .subjects td{
-     max-width: 250px;
+     max-width: 200px;
     word-wrap: break-word;
-    page-break:break-all;
 }
 
-.alert{
+.alert-succes{
   color:#3D9D34;
   background: #ABE0A3;
   width: 200px;
