@@ -7,13 +7,7 @@
 		<li><%= link_to "Nieuw",    new_path %></li>
 	</ul> 
 </li> 
-<li><a>Agenda</a> <!-- Second drop down button with different supplies -->
-	<ul>
-		<li><%= link_to "Overzicht",    '#' %></li> 
-		<li><%= link_to "Nieuw",    '#' %></li> 
-		<li><%= link_to "Voltooid",    '#' %></li>	
-	</ul> 
-</li>
+<li><%= link_to "Agenda", shows_path %></li>
 <li><%= link_to "Gebruikers",    users_path %></li>
 <li><%= link_to "Notities",    '#' %></li>
 <li><%= link_to current_user.name,    current_user %>

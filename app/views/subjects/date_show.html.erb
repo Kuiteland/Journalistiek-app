@@ -1,5 +1,8 @@
-<% provide(:title, 'All Subjects') %>
-<h1>All subjects</h1>
+<% provide(:title, 'Agenda') %>
+<% @this_date = @date %>
+<% @this_date["%"] = "" %>
+<% @this_date["%"] = "" %>
+<h1>All subjects of <%= @date %></h1>
 
 <%= will_paginate %>
 
@@ -21,7 +24,9 @@
       <td><%= subject.reg %></td>
       <td><%= subject.host %> </td>
       <td><%= subject.status %> </td>
-      <td><%= subject.air_date %> </td>
+      <td><%= subject.air_date.day %> -
+          <%= subject.air_date.month %> -
+          <%= subject.air_date.year %></td>
       <td><%= link_to "Edit", edit_subject_path(subject) %>
       	<% if current_user.admin? %>
         <td>
