@@ -198,8 +198,13 @@ a{text-decoration:none}
     margin-top:45px;
     text-align:left; 
 }
+.subjects td{
+     max-width: 250px;
+    word-wrap: break-word;
+    page-break:break-all;
+}
 
-.newclass{
+.alert{
   color:#3D9D34;
   background: #ABE0A3;
   width: 200px;
