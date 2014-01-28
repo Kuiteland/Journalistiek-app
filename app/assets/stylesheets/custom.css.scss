@@ -169,7 +169,7 @@ body {
 a{text-decoration:none}
 
 .container h1{
-    text-align:center:
+    text-align:center
 }
 .head h1{
     margin-top:40px;
@@ -196,20 +196,22 @@ a{text-decoration:none}
 }
 .subjects{
     margin-top:45px;
-    text-align:left;
-    
+    text-align:left; 
 }
 
+.newclass{
+  color:#3D9D34;
+  background: #ABE0A3;
+  width: 200px;
+  padding-left: 7px;
+  padding-top: 7px;
+  padding-right:7px;
+  padding-bottom:7px;
+  -webkit-border-radius: 5px;
+  border-radius:5px;
+}
 
 /* Color while hovering */
 .clear_all {
   clear: both;
   height: 8px; }
-
-  .subjects{width: 1000px;
-    word-break:break-all;
-<<<<<<< HEAD
-  }
-=======
-  }
->>>>>>> 746c32a705340ef3d353d84fd04ddf7598d4d0d6
