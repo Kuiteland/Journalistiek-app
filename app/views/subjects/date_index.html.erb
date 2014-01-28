@@ -1,0 +1,20 @@
+<% provide(:title, 'Uitzendingen') %>
+<h1>Uitzendingen</h1>
+
+<%= will_paginate %>
+
+<table class="subjects">
+  <tr>
+    <th>Uitzend datum</th>
+  </tr>
+  <% @old = "" %>
+  <% @subjects.each do |subject| %>
+  <% unless subject.air_date == @old %>
+    <tr>
+      <td><%= subject.air_date %> </td>
+    </tr>
+    <% end %>
+    <% @old = subject.air_date %>
+  <% end %>
+</table>
+  <%= will_paginate %>

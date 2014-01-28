@@ -32,12 +32,12 @@
       <td><%= subject.status %> </td>
       <td><%= subject.air_date %> </td>
       <td><%= link_to "Edit", edit_subject_path(subject) %>
-      <td>
       	<% if current_user.admin? %>
+        <td>
     | 		<%= link_to "delete", subject, method: :delete,
                                   data: { confirm: "You sure?" } %>
+        </td>
   		<% end %>
-  	  </td>
     </tr>
   <% end %>
 </table>

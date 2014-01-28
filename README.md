@@ -16,5 +16,3 @@ Framewors, languages and libraries:
 * Ruby on Rails
 * HTML
 * CSS
-* Bootstrap
-* jQuery
