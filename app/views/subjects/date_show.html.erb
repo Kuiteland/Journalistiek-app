@@ -1,0 +1,35 @@
+<% provide(:title, 'All Subjects') %>
+<h1>All subjects</h1>
+
+<%= will_paginate %>
+
+<table class="subjects">
+  <tr>
+    <th>Naam</th>
+    <th>Korte beschrijving</th>
+    <th>Redacteur</th>
+    <th>Regisseur</th>
+    <th>Presentator</th>
+    <th>Status</th>
+    <th>Uitzend datum</th>
+  </tr>
+  <% @subjects.each do |subject| %>
+    <tr>
+      <td><%= link_to subject.name, subject %> </td>
+      <td><%= subject.short_description %> </td>
+      <td><%= subject.red %> </td>
+      <td><%= subject.reg %></td>
+      <td><%= subject.host %> </td>
+      <td><%= subject.status %> </td>
+      <td><%= subject.air_date %> </td>
+      <td><%= link_to "Edit", edit_subject_path(subject) %>
+      	<% if current_user.admin? %>
+        <td>
+    | 		<%= link_to "delete", subject, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+        </td>
+  		<% end %>
+    </tr>
+  <% end %>
+</table>
+  <%= will_paginate %>

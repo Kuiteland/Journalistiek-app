@@ -9,9 +9,10 @@
   </tr>
   <% @old = "" %>
   <% @subjects.each do |subject| %>
-  <% unless subject.air_date == @old %>
+  <% unless subject.air_date == @old || subject.air_date == nil %>
     <tr>
-      <td><%= subject.air_date %> </td>
+      <td><%= link_to subject.air_date, date_path(
+              :date => subject.air_date) %> </td>
     </tr>
     <% end %>
     <% @old = subject.air_date %>
