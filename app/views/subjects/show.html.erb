@@ -1,5 +1,5 @@
 <% provide(:title, @subject.name) %>
 <h1><%= @subject.name %></h1>
-<h1><%= @subject.short_description %></h1>
-<p><%= @subject.description %></p> 
-<%= link_to "EDIT", edit_subject_path(@subject) %>
+<h1 id="subtitel"><%= @subject.short_description %></h1>
+<p id="descrip"><%= @subject.description  %></p> 
+<%= link_to "Edit", edit_subject_path(@subject), id="editbutton" %>
