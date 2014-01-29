@@ -4,6 +4,7 @@
     margin:0 auto;
     padding-left: 50px;
     padding-top: 20px;
+    padding-bottom:30px;
     -webkit-border-radius: 5px;
     border-radius:5px;
 }
@@ -29,6 +30,8 @@
 }
 #subject_air_date_3i {
     margin-top:7%;
+    line-height:1;
+    margin-bottom:0px;
 }
 .row label {
     color: #000;
@@ -257,6 +260,27 @@ a {
     cursor: pointer;
     font-size: 14px;
     font-family: Helvetica;
+}
+#createbutton{
+background: #4b8df9;
+    background: #4b8df9;
+    padding: 5px 5px 5px;
+    color: #fbf7f7;
+    text-decoration:none;
+    font-weight: bold;
+    line-height: 1;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999;
+    box-shadow: 0 1px 3px #999;
+    text-shadow: 0 -1px 1px #222;
+    border: none;
+    float:left;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Helvetica;  
 }
 /* Color while hovering */
  .clear_all {
