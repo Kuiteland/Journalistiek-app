@@ -13,4 +13,10 @@ class ContactsController < ApplicationController
 
 	def destroy
 	end
+
+	private
+
+    def micropost_params
+      params.require(:contact).permit(:name, :mail, :number)
+    end
 end
