@@ -25,7 +25,7 @@ class SubjectsController < ApplicationController
 
   def show
   	@subject = Subject.find(params[:id])
-    @contacts = @subject.contacts.find.all
+    @contacts = @subject.contacts.all
   end
 
   def create

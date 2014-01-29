@@ -2,7 +2,7 @@
 <h1><%= @subject.name %></h1>
 <h1 id="subtitel"><%= @subject.short_description %></h1>
 <p id="descrip"><%= @subject.description  %></p> 
-<%= link_to "Edit", edit_subject_path(@subject), id="editbutton" %>
+<%= link_to "Edit", edit_subject_path(@subject), id: "editbutton" %>
 
 <% if @subject.contacts.any? %>
 	<ol class = "contacts">
