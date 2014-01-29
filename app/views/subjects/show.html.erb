@@ -3,3 +3,10 @@
 <h1><%= @subject.short_description %></h1>
 <p><%= @subject.description %></p> 
 <%= link_to "EDIT", edit_subject_path(@subject) %>
+
+<% if @subject.contacts.any? %>
+	<ol class = "contacts">
+		<%= render @micropost %>
+	</ol>
+<% end %>
+
