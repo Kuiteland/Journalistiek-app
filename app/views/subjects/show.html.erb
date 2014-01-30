@@ -1,5 +1,6 @@
 <% provide(:title, @subject.name) %>
 <h1><%= @subject.name %></h1>
+<<<<<<< HEAD
 <h1 id="subtitel"><%= @subject.short_description %></h1>
 <p id="descrip"><%= @subject.description  %></p> 
 <%= link_to "Edit", edit_subject_path(@subject), id: "editbutton" %>
@@ -9,3 +10,8 @@
 		<%= render @micropost %>
 	</ol>
 <% end %>
+=======
+<h1 id:"subtitel"><%= @subject.short_description %></h1>
+<p id:"descrip"><%= @subject.description  %></p> 
+<%= link_to "Edit", edit_subject_path(@subject), id:"editbutton" %>
+>>>>>>> a7731442aa1cf204cc2d92006755e1d68809bba6

@@ -1,7 +1,8 @@
 <% provide(:title, @user.name) %>
 <h1><%= @user.name %></h1> 
-
+<h1 id:"subtitel"><%= @user.email %></h1>
 <% if current_user == @user %>
 
-<%= link_to "Settings", edit_user_path(current_user) %>
+
+<%= link_to "Settings", edit_user_path(current_user), id:"editbutton"%>
 <% end %>
