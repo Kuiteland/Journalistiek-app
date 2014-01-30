@@ -18,7 +18,7 @@ Framewors, languages and libraries:
 * CSS
 
   # clone repo
-  git clone git@github.com:Kuiteland/Journalistiek-app.git Kuiteland
+  git clone github.com/Kuiteland/Journalistiek-app
 
   # make sure all gems are there
   cd Journalistiek-app
