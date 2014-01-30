@@ -132,7 +132,8 @@ body {
     color: inherit;
 }
 #menu li:hover ul {
-    display: block;
+    width:600%;
+    display:block;
     position: absolute;
     float: left;
 }
@@ -262,8 +263,8 @@ a {
     font-size: 14px;
     font-family: Helvetica;
 }
-#createbutton{
-background: #4b8df9;
+#createbutton {
+    background: #4b8df9;
     background: #4b8df9;
     padding: 5px 5px 5px;
     color: #fbf7f7;
@@ -281,7 +282,7 @@ background: #4b8df9;
     float:left;
     cursor: pointer;
     font-size: 14px;
-    font-family: Helvetica;  
+    font-family: Helvetica;
 }
 /* Color while hovering */
  .clear_all {
