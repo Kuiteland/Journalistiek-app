@@ -1,0 +1,87 @@
+Designdoc 
+=================
+Database:
+*users
+	*id 				(varchar255)
+	*name 				(varchar255)
+	*email 				(varchar255)
+	*created_at 		(datatime)
+	*updated_at 		(datatime)
+	*password_digest 	(varchar255)
+	*remember_token 	(varchar255)
+	*admin 				(boolean)
+
+*redacteur
+	*id 				(varchar255)
+	*name 				(varchar255)
+	*email 				(varchar255)
+	*created_at 		(datatime)
+	*updated_at 		(datatime)
+	
+*regisseur
+	*id 				(varchar255)
+	*name 				(varchar255)
+	*email 				(varchar255)
+	*created_at 		(datatime)
+	*updated_at 		(datatime)
+
+*regisseur
+	*id 				(varchar255)
+	*name 				(varchar255)
+	*email 				(varchar255)
+	*created_at 		(datatime)
+	*updated_at 		(datatime)
+
+*notitie
+	*name 				(varchar255)
+	*user_id			(varchar255)
+	*content 			(TEXT)
+	*created_at 		(datatime)
+	*updated_at 		(datatime)
+
+*subjects
+	*id					(INTERGER PRIMARY KEY)
+	*name				(varchar255)
+	*short_description	(varchar255)
+	*description 		TEXT
+	*red (redacteur)	(varchar255)
+	*reg (regiseur)		(varchar255)
+	*host				(varchar255)
+	*status				(varchar255)
+	*created_at			datetime
+	*updated_at			datetime
+	*air_date			date
+
+*contacts
+	*id 				(varchar255)
+	*name 				(varchar255)
+	*email 				(varchar255)
+	*number				(varchar255)
+	*subnject_id			(interger)
+	*created_at			datetime
+	*updated_at			datetime
+
+*links
+	*id 				(varchar255)
+	*name 				(varchar255)
+	*link 				(varchar255)
+
+Classes & methods:
+
+*full-titel
+
+*class user
+
+*class subjects
+	*has_many_contacts
+	*has_many_links
+
+*class links
+	*belongs_to
+
+
+
+
+
+
+
