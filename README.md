@@ -16,3 +16,16 @@ Framewors, languages and libraries:
 * Ruby on Rails
 * HTML
 * CSS
+
+  # clone repo
+  git clone www.github.com/Kuiteland/Journalistiek-app
+
+  # make sure all gems are there
+  cd Journalistiek-app
+  bundle
+
+  # initialize and seed database
+  rake db:setup
+
+  # start server
+  rails s
