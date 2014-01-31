@@ -3,9 +3,11 @@
 <h1 id="subtitel"><%= @subject.short_description %></h1>
 <p id="descrip"><%= @subject.description  %></p> 
 <%= link_to "Edit", edit_subject_path(@subject), id: "editbutton" %>
+<%= link_to "Add contact", new_subject_contact_path(@subject),
+							 id: "editbutton" %>
 
 <% if @subject.contacts.any? %>
 	<ol class = "contacts">
-		<%= render @micropost %>
+		<%= render @contacts %>
 	</ol>
 <% end %>

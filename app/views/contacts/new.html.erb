@@ -1,0 +1,32 @@
+<% provide(:title, 'New Contact') %>
+<h1>New contact for <%= @subject.name %></h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for [@subject, @contact] do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <table>
+      <tr>
+        <td>
+      <%= f.label :name %>
+    </td>
+    <td>
+      <%= f.text_field :name %>
+    </td>
+  </tr><tr>
+  <td>
+      <%= f.label :email %>
+    </td><td>
+      <%= f.text_field :email %>
+      </td></tr>
+<tr><td>
+      <%= f.label :number %>
+    </td><td>
+      <%= f.text_field :number %>
+    </td></tr>
+  </table>
+      <%= f.submit "Create", class: "bottom" %>
+    <% end %>
+  </div>
+</div>

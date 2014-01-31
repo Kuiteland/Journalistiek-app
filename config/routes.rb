@@ -1,8 +1,9 @@
 JourDat::Application.routes.draw do
-  resources :subjects
+  resources :subjects do
+    resources :contacts, only: [:new, :create, :destroy]
+  end
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :contacts, only: [:create, :destroy]
   root 'main#home'
   match 'create', to: 'users#new', via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
