@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140129145818) do
+ActiveRecord::Schema.define(version: 20140207145630) do
 
   create_table "contacts", force: true do |t|
     t.string   "name"
@@ -23,6 +23,27 @@ ActiveRecord::Schema.define(version: 20140129145818) do
   end
 
   add_index "contacts", ["subject_id"], name: "index_contacts_on_subject_id"
+
+  create_table "presentators", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "redacteurs", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "regisseurs", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "subjects", force: true do |t|
     t.string   "name"

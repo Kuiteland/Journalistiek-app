@@ -1,0 +1,2 @@
+module RedacteursHelper
+end
