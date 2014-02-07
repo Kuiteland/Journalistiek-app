@@ -22,13 +22,20 @@
   </tr>
   <tr>
     <td><p><%= f.label :Regisseur %></td>
-    <td><%= f.select(:reg, 
-            options_for_select([['A', 1], ['B', 2]])) %></p></td>
+    <td><select>
+          <% Regisseur.all.each do |regisseur| %>
+              <option value= "<%= regisseur.name %>"</option>
+    <% end %>
+</select></td>
   </tr>
+
   <tr>
     <td><p><%= f.label :Presentator %></td>
-    <td><%= f.select(:host, 
-            options_for_select([['A', 1], ['B', 2]])) %></p></td>
+    <td><select name="post[author_id]">
+          <% Presentator.all.each do |presentator| %>
+              <option value= "<%= presentator.name %>"</option>
+    <% end %>
+</select></td>
   </tr>
   <tr>
       <td><p><%= f.label :status %></td>
