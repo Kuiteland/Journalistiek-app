@@ -1,4 +1,7 @@
 JourDat::Application.routes.draw do
+  resources :presentators
+  resources :regisseurs
+  resources :redacteurs
   resources :subjects do
     resources :contacts, only: [:new, :create, :destroy]
   end
