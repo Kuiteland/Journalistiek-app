@@ -17,26 +17,27 @@
 <table>
   <tr>
     <td><p><%= f.label :Redacteur %></td>
-    <td><%= f.select(:red, 
-            options_for_select([['A', "A"], ['B', 2]])) %></p></td>
+    <td>
+          <%= f.collection_select(:red,
+                      Redacteur.all, :name, :name) %></p>
+    </td>
   </tr>
   <tr>
     <td><p><%= f.label :Regisseur %></td>
-    <td><select>
-          <% Regisseur.all.each do |regisseur| %>
-              <option value= "<%= regisseur.name %>"</option>
-    <% end %>
-</select></td>
+    <td>
+          <%= f.collection_select(:reg,
+                      Regisseur.all, :name, :name) %></p>
+    </td>
   </tr>
 
   <tr>
     <td><p><%= f.label :Presentator %></td>
-    <td><select name="post[author_id]">
-          <% Presentator.all.each do |presentator| %>
-              <option value= "<%= presentator.name %>"</option>
-    <% end %>
-</select></td>
+    <td>
+          <%= f.collection_select(:host,
+                      Presentator.all, :name, :name) %></p>
+    </td>
   </tr>
+
   <tr>
       <td><p><%= f.label :status %></td>
       <td><%= f.select(:status, 

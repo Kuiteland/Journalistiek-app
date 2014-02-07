@@ -3,7 +3,7 @@ class RegisseursController < ApplicationController
   										:update, :edit]
 
   def index
-    @users = Regisseur.paginate(page: params[:page], :per_page => 2)
+    @regisseurs = Regisseur.paginate(page: params[:page], :per_page => 2)
   end
 
   def show
@@ -21,7 +21,7 @@ class RegisseursController < ApplicationController
   def update
     @user = Regisseur.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Profile pdated"
       redirect_to @user
     else
       render 'edit'
