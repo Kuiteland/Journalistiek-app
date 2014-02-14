@@ -8,8 +8,14 @@
 	</ul> 
 </li> 
 <li><%= link_to "Agenda", shows_path %></li>
-<li><%= link_to "Gebruikers",    users_path %></li>
-<li><%= link_to "Notities",    '#' %></li>
+<li><%= link_to "Gebruikers",    users_path %>
+	<ul>
+		<li><%= link_to "Presentators",    presentators_path %></li>
+		<li><%= link_to "Redacteurs",    redacteurs_path %></li> 
+		<li><%= link_to "Regisseurs",    regisseurs_path %></li>
+	</ul>
+</li>
+<li><%= link_to "My subjects", my_index_path %></li>
 <li><%= link_to current_user.name,    current_user %>
 <ul>
 	<li><%= link_to "Sign out", signout_path, method: "delete" %></li>

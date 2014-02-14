@@ -1,0 +1,22 @@
+<% provide(:title, 'New Tag') %>
+<h1>New tag for <%= @subject.name %></h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for [@subject, @tag] do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <table>
+      <tr>
+        <td>
+      <%= f.label :name %>
+    </td>
+    <td>
+      <%= f.text_field :name %>
+    </td>
+  </tr>
+  </table>
+      <%= f.submit "Create", class: "bottom" %>
+    <% end %>
+  </div>
+</div>

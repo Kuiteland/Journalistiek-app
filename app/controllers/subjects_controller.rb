@@ -7,6 +7,17 @@ class SubjectsController < ApplicationController
                   page: params[:page], :per_page => 30)
   end
 
+  def my_index
+    @user = current_user.name
+    @subjects = Subject.includes(:tags).
+                paginate(:conditions => ['subjects.host LIKE ?
+                         OR subjects.red LIKE ? 
+                         OR subjects.reg LIKE ? 
+                         OR tags.name LIKE ?', 
+                         @user, @user, @user, @user],
+                  page: params[:page], :per_page => 30)
+  end
+
   def date_index
     @subjects = Subject.order(:air_date).
                 paginate(page: params[:page], :per_page => 30)
@@ -26,6 +37,7 @@ class SubjectsController < ApplicationController
   def show
   	@subject = Subject.find(params[:id])
     @contacts = @subject.contacts.all
+    @tags = @subject.tags.all
   end
 
   def create

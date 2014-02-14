@@ -21,7 +21,7 @@ class RegisseursController < ApplicationController
   def update
     @user = Regisseur.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile pdated"
+      flash[:success] = "Profile updated"
       redirect_to @user
     else
       render 'edit'
@@ -37,7 +37,7 @@ class RegisseursController < ApplicationController
   def create
     @user = Regisseur.new(user_params)
     if @user.save
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Profile created"
       redirect_to @user
     else
       render 'new'

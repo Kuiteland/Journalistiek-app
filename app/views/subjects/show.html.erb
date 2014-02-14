@@ -6,8 +6,18 @@
 <%= link_to "Add contact", new_subject_contact_path(@subject),
 							 id: "editbutton" %>
 
+<%= link_to "Add tag", new_subject_tag_path(@subject),
+							 id: "editbutton" %>
+
 <% if @subject.contacts.any? %>
+<h1>Contacts</h1>
 	<ol class = "contacts">
 		<%= render @contacts %>
+	</ol>
+<% end %>
+<% if @subject.tags.any? %>
+<h1>Tags</h1>
+	<ol class = "tags">
+		<%= render @tags %>
 	</ol>
 <% end %>

@@ -5,4 +5,12 @@
 
 
 <%= link_to "Settings", edit_user_path(current_user), id:"editbutton"%>
+<% if current_user.admin? %>
+<h1> Admin settings </h1>
+<%= link_to "Add user", new_user_path, id:"editbutton"%>
+<%= link_to "Add presentator", new_presentator_path, id:"editbutton"%>
+<%= link_to "Add redacteur", new_redacteur_path, id:"editbutton"%>
+<%= link_to "Add regisseur", new_regisseur_path, id:"editbutton"%>
+
+<% end %>
 <% end %>

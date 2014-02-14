@@ -17,6 +17,9 @@ class ContactsController < ApplicationController
 	end
 
 	def destroy
+    Contact.find(params[:id]).destroy
+    flash[:success] = "User deleted."
+    redirect_to users_url
 	end
 
 	private

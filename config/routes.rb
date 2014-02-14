@@ -4,6 +4,7 @@ JourDat::Application.routes.draw do
   resources :redacteurs
   resources :subjects do
     resources :contacts, only: [:new, :create, :destroy]
+    resources :tags, only: [:new, :create, :destroy]
   end
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
@@ -13,6 +14,7 @@ JourDat::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match 'new', to: 'subjects#new',              via: 'get'
   match 'shows', to: 'subjects#date_index',      via: 'get'
+  match 'my_index', to: 'subjects#my_index',      via: 'get'
   match 'date', to: 'subjects#date_show',        via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

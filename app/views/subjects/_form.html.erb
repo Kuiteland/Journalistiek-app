@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@subject) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :name %>
+      <%= f.text_field( :name, :maxlength => 50) %>
+      <p><%= f.label :short_description %></p>
+      <p><%= f.text_field(:short_description, :maxlength => 50) %></p>
+
+      <%= f.label :description %>
+      <p><%= f.text_area(:description, size: "50x12") %></p>
+
+<table>
+  <tr>
+    <td><p><%= f.label :Redacteur %></td>
+    <td>
+          <%= f.collection_select(:red,
+                      Redacteur.all, :name, :name) %></p>
+    </td>
+  </tr>
+  <tr>
+    <td><p><%= f.label :Regisseur %></td>
+    <td>
+          <%= f.collection_select(:reg,
+                      Regisseur.all, :name, :name) %></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td><p><%= f.label :Presentator %></td>
+    <td>
+          <%= f.collection_select(:host,
+                      Presentator.all, :name, :name) %></p>
+    </td>
+  </tr>
+
+  <tr>
+      <td><p><%= f.label :status %></td>
+      <td><%= f.select(:status, 
+            options_for_select([['Idee', "Idee"], ['Research', "Research"],
+                                ['Productie', "Productie"],
+                                ['Klaar', "Klaar"],
+                                ['Afgewezen', "Afgewezen"]])) %></p></td>
+  </tr>
+  <tr>
+      <td><p><%= f.label "Uitzend datum" %></td>
+       <td> <%= f.date_select(:air_date, :order => [:day, :month, :year],
+                         :include_blank => true)%></p></td>
+  </tr>                     
+</table>
+
+      <%= f.submit @action, id: "createbutton" %>
+    <% end %>
+  </div>
+</div>
